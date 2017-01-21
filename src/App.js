@@ -2,12 +2,16 @@ import React, { Component } from 'react';
 import './App.css';
 
 const text = [
-  'justify-content: flex-start;',
-  'justify-content: flex-end;',
-  'justify-content: center;',
-  'justify-content: space-around;',
-  'justify-content: space-between;',
+  'justify-content: center; align-items: center;',
+  'justify-content: center; align-items: center;',
+  'align-items: center;',
+  'align-items: stretch;',
+  'align-items: baseline;',
+]
 
+const text2 = [
+  'flex-direction: row;',
+  'flex-direction: column;'
 ]
 
 class App extends Component {
@@ -16,7 +20,7 @@ class App extends Component {
 
   animate() {
     this.i++
-    if (this.i === 5) {
+    if (this.i === 2) {
       this.i = 0
     }
     this.setState({ stage: 'stage' + (this.i + 1) }, () => {
@@ -31,10 +35,13 @@ class App extends Component {
   }
 
   getDimensions(id) {
+    console.log(document.getElementById(id).getBoundingClientRect())
     const cont = document.getElementById('container2')
     return {
       top: document.getElementById(id).getBoundingClientRect().top - cont.getBoundingClientRect().top,
-      left: document.getElementById(id).getBoundingClientRect().left - cont.getBoundingClientRect().left
+      left: document.getElementById(id).getBoundingClientRect().left - cont.getBoundingClientRect().left,
+      width: document.getElementById(id).getBoundingClientRect().width,
+      height: document.getElementById(id).getBoundingClientRect().height
     }
   }
 
@@ -42,7 +49,7 @@ class App extends Component {
     const cont = document.getElementById('container2')
     return {
       width: cont.getBoundingClientRect().with - 40,
-      height: cont.getBoundingClientRect().height - 40
+      height: cont.getBoundingClientRect().height - 40,
     }
   }
 
@@ -59,6 +66,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <h1>{text2[this.i]}</h1>
         <h1>{text[this.i]}</h1>
         <div id="app">
           <div id="container" style={this.state.cont}>
