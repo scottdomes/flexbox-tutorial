@@ -1,0 +1,109 @@
+body {
+  padding: 40px;
+  position: relative;
+}
+
+button {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Helvetica';
+  transform: 2s all ease;
+}
+
+#app {
+  position: relative;
+}
+
+#container, #container2 {
+  background-color: #ecf0f1;
+  padding: 20px;
+  transition: all 2s ease;
+}
+
+#container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1,
+}
+
+#container2 {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  height: 300px;
+}
+
+#container2.stage1 {
+  align-items: stretch;
+}
+
+#container2.stage2 {
+  align-items: flex-start;
+}
+
+#container2.stage3 {
+  align-items: flex-end;
+}
+
+#container2.stage4 {
+  align-items: stretch;
+}
+
+#container2.stage5 {
+  align-items: baseline;
+}
+
+.square, .square2 {
+  width: 120px;
+  height: 120px;
+  margin: 10px;
+  background-color: #e74c3c;
+  transition: all 2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.square {
+  position: absolute;
+  margin: 0;
+  z-index: 2;
+}
+
+.square2, #container2 {
+  opacity: 0;
+}
+
+.square2 p {
+  font-style: italic;
+  font-size: 35px;
+}
+
+p {
+  color: white;
+  font-family: 'Helvetica';
+  font-size: 30px;
+}
+
+#one, #one2 {
+  width: 100px;
+  background-color: #2ecc71;
+}
+
+#two, #two2 {
+  height: 90px;
+  background-color: #f1c40f;
+}
+
+#four, #four2 {
+  width: 190px;
+  background-color: #3498db;
+}
