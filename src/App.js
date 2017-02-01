@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import './App.css';
 
 const text = [
-  'justify-content: center; align-items: center;',
-  'justify-content: center; align-items: center;',
-  'align-items: center;',
-  'align-items: stretch;',
-  'align-items: baseline;',
+  'align-self: flex-start;',
+  'align-self: flex-end;',
+  'align-self: center;',
+  'align-self: stretch;',
+  'align-self: baseline;',
 ]
 
 const text2 = [
@@ -20,7 +20,7 @@ class App extends Component {
 
   animate() {
     this.i++
-    if (this.i === 2) {
+    if (this.i === 5) {
       this.i = 0
     }
     this.setState({ stage: 'stage' + (this.i + 1) }, () => {
@@ -66,7 +66,6 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>{text2[this.i]}</h1>
         <h1>{text[this.i]}</h1>
         <div id="app">
           <div id="container" style={this.state.cont}>

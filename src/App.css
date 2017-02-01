@@ -35,36 +35,35 @@ h1 {
 
 #container2 {
   display: flex;
-
-  /*height: 300px;*/
-}
-
-#container2.stage1 {
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  height: 300px;
 }
 
-#container2.stage2 {
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+#container2.stage1 .square2#one2, #container2.stage1 .square2#two2  {
+  align-self: flex-start;
 }
 
-#container2.stage3 {
-  align-items: center;
+#container2.stage2 .square2#one2, #container2.stage2 .square2#two2  {
+  align-self: flex-end;
+
 }
 
-#container2.stage4 {
-  align-items: stretch;
+#container2.stage3 .square2#one2, #container2.stage3 .square2#two2  {
+  align-self: center;
+}
+
+#container2.stage4 .square2#one2, #container2.stage4 .square2#two2  {
+  height: auto !important;
+  align-self: stretch;
 }
 
 /*#container2.stage4 .square2 {
   height: auto !important;
 }
 */
-#container2.stage5 {
-  align-items: baseline;
+#container2.stage5 .square2#one2, #container2.stage5 .square2#two2  {
+  align-self: baseline;
 }
 
 .square, .square2 {
