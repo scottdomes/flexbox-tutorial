@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 import './App.css';
 
 const text = [
-  'justify-content: center; align-items: center;',
-  'justify-content: center; align-items: center;',
-  'align-items: center;',
-  'align-items: stretch;',
-  'align-items: baseline;',
+  'justify-content: flex-start;',
+  'justify-content: flex-end;',
+  'justify-content: center;',
+  'justify-content: space-between;',
+  'justify-content: space-around;',
 ]
 
 const text2 = [
-  'flex-direction: row;',
-  'flex-direction: column;'
+  // 'flex-direction: row;',
+  // 'flex-direction: column;'
 ]
 
 class App extends Component {
@@ -20,7 +20,7 @@ class App extends Component {
 
   animate() {
     this.i++
-    if (this.i === 2) {
+    if (this.i === 5) {
       this.i = 0
     }
     this.setState({ stage: 'stage' + (this.i + 1) }, () => {
