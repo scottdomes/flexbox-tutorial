@@ -23,6 +23,7 @@ h1 {
   background-color: #ecf0f1;
   padding: 20px;
   transition: all 2s ease;
+  max-height: 500px;
 }
 
 #container {
@@ -35,28 +36,27 @@ h1 {
 
 #container2 {
   display: flex;
-
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-flow: column wrap;
   /*height: 300px;*/
 }
 
 #container2.stage1 {
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  align-content: stretch;
 }
 
 #container2.stage2 {
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-content: flex-start;
 }
 
 #container2.stage3 {
-  align-items: center;
+  align-content: flex-end;
 }
 
 #container2.stage4 {
-  align-items: stretch;
+  align-content: center;
 }
 
 /*#container2.stage4 .square2 {
@@ -64,7 +64,11 @@ h1 {
 }
 */
 #container2.stage5 {
-  align-items: baseline;
+  align-content: space-between;
+}
+
+#container2.stage6 {
+  align-content: space-around;
 }
 
 .square, .square2 {
@@ -113,4 +117,31 @@ p {
 #four, #four2 {
   width: 190px;
   background-color: #3498db;
+}
+
+#five, #five2 {
+  width: 100px;
+  background-color: #1abc9c;
+}
+
+#six, #six2 {
+  height: 90px;
+  background-color: #e67e22;
+}
+
+#seven, #seven2 {
+  width: 190px;
+  background-color: #9b59b6;
+}
+
+#eight, #eight2 {
+  background-color: #2980b9;
+}
+
+#nine, #nine2 {
+  background-color: #34495e;
+}
+
+#ten, #ten2 {
+  background-color: #c0392b;
 }
