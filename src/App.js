@@ -1,23 +1,22 @@
 import React, { Component } from 'react';
 import './App.css';
 
-const text = [
-  'order: 0',
-  'order: 1',
-  'order: 3',
-  'order: 99',
-  'order: -1',
+const text2 = [
+  '.square { flex-shrink: 1; }',
+  '.square { flex-shrink: 1; }',
+  '.square { flex-shrink: 1; }',
+  '.square { flex-shrink: 1; }',
+  '.square { flex-shrink: 1; }',
 ]
 
-const text2 = false
-// const text2 = [
-//   'flex-flow: column wrap;',
-//   'flex-flow: column wrap;',
-//   'flex-flow: column wrap;',
-//   'flex-flow: column wrap;',
-//   'flex-flow: column wrap;',
-//   'flex-flow: column wrap;'
-// ]
+// const text2 = false
+const text = [
+  '.square#three { flex-shrink: 2; }',
+  '.square#three { flex-shrink: 2; }',
+  '.square#three { flex-shrink: 2; }',
+  '.square#three { flex-shrink: 2; }',
+  '.square#three { flex-shrink: 2; }',
+]
 
 class App extends Component {
   state = { adjusted: false, box1: {}, box2: {}, box3: {}, box4: {}, stage: 'stage1' }
@@ -25,6 +24,7 @@ class App extends Component {
 
   animate() {
     this.i++
+    console.log(this.i)
     if (this.i === text.length) {
       this.i = 0
     }
@@ -46,7 +46,6 @@ class App extends Component {
   }
 
   getDimensions(id) {
-    console.log(document.getElementById(id).getBoundingClientRect())
     const cont = document.getElementById('container2')
     return {
       top: document.getElementById(id).getBoundingClientRect().top - cont.getBoundingClientRect().top,
@@ -59,7 +58,7 @@ class App extends Component {
   getContainerDimensions() {
     const cont = document.getElementById('container2')
     return {
-      width: cont.getBoundingClientRect().with - 40,
+      width: cont.getBoundingClientRect().width - 40,
       height: cont.getBoundingClientRect().height - 40,
     }
   }
