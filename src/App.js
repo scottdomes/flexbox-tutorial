@@ -2,23 +2,22 @@ import React, { Component } from 'react';
 import './App.css';
 
 const text = [
-  'align-content: stretch;',
-  'align-content: flex-start;',
-  'align-content: flex-end;',
-  'align-content: center;',
-  'align-content: space-between;',
-  'align-content: space-around;'
+  'order: 0',
+  'order: 1',
+  'order: 3',
+  'order: 99',
+  'order: -1',
 ]
 
-// const text2 = false
-const text2 = [
-  'flex-flow: column wrap;',
-  'flex-flow: column wrap;',
-  'flex-flow: column wrap;',
-  'flex-flow: column wrap;',
-  'flex-flow: column wrap;',
-  'flex-flow: column wrap;'
-]
+const text2 = false
+// const text2 = [
+//   'flex-flow: column wrap;',
+//   'flex-flow: column wrap;',
+//   'flex-flow: column wrap;',
+//   'flex-flow: column wrap;',
+//   'flex-flow: column wrap;',
+//   'flex-flow: column wrap;'
+// ]
 
 class App extends Component {
   state = { adjusted: false, box1: {}, box2: {}, box3: {}, box4: {}, stage: 'stage1' }
