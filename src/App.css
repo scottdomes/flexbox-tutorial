@@ -73,7 +73,7 @@ h1 {
 }
 
 .square, .square2 {
-  width: 120px;
+  /*width: auto;*/
   height: 120px;
   margin: 10px;
   background-color: #e74c3c;
@@ -82,7 +82,6 @@ h1 {
   justify-content: center;
   align-items: center;
   flex-shrink: 1;
-  /*flex-grow: 1;*/
 }
 
 .square {
@@ -105,6 +104,7 @@ p {
   color: white;
   font-family: 'Helvetica';
   font-size: 30px;
+  margin: 0 100px;
 }
 
 #one, #one2 {
